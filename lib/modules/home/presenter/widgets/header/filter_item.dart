@@ -26,7 +26,7 @@ class _FilterItemState extends State<FilterItem> {
           borderRadius: BorderRadius.circular(9),
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 6),
+          padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 7),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -45,6 +45,7 @@ class _FilterItemState extends State<FilterItem> {
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
                   color: Colors.black87,
+                  fontSize: 13,
                 ),
               )
             ],

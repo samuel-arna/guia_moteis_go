@@ -17,9 +17,9 @@ class _MenuTabState extends State<MenuTab> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Container(
-        height: 36,
+        height: 42,
         decoration: BoxDecoration(
-          color: Colors.black26,
+          color: Colors.black12,
           borderRadius: BorderRadius.circular(45),
         ),
         child: Stack(
@@ -29,7 +29,7 @@ class _MenuTabState extends State<MenuTab> {
               alignment: agora ? Alignment.centerLeft : Alignment.centerRight,
               child: Container(
                 width: (MediaQuery.of(context).size.width - 42 - 90) / 2,
-                height: 36,
+                height: 42,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(45),
                   color: Colors.white,
@@ -52,7 +52,7 @@ class _MenuTabState extends State<MenuTab> {
                           FaIcon(
                             FontAwesomeIcons.boltLightning,
                             color: agora ? AppColors.primary : Colors.white,
-                            size: 15,
+                            size: 17,
                           ),
                           SizedBox(
                             width: 6,
@@ -61,8 +61,8 @@ class _MenuTabState extends State<MenuTab> {
                             'ir agora',
                             style: TextStyle(
                               color: agora ? Colors.black54 : Colors.white,
-                              fontWeight: FontWeight.w700,
-                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 17,
                             ),
                           ),
                         ],
@@ -84,7 +84,7 @@ class _MenuTabState extends State<MenuTab> {
                           FaIcon(
                             FontAwesomeIcons.calendarCheck,
                             color: !agora ? AppColors.primary : Colors.white,
-                            size: 15,
+                            size: 17,
                           ),
                           SizedBox(
                             width: 6,
@@ -93,8 +93,8 @@ class _MenuTabState extends State<MenuTab> {
                             'ir outro dia',
                             style: TextStyle(
                               color: !agora ? Colors.black54 : Colors.white,
-                              fontWeight: FontWeight.w700,
-                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 17,
                             ),
                           ),
                         ],

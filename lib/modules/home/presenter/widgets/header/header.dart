@@ -17,7 +17,7 @@ class _HeaderState extends State<Header> {
     return Stack(
       children: [
         Container(
-          height: 195,
+          height: 198,
           color: AppColors.primary,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 21),
@@ -69,7 +69,7 @@ class _HeaderState extends State<Header> {
                               Text(
                                 'zona oeste',
                                 style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 16,
                                   color: Colors.white,
                                   fontWeight: FontWeight.w700,
                                 ),
@@ -80,7 +80,7 @@ class _HeaderState extends State<Header> {
                               FaIcon(
                                 FontAwesomeIcons.chevronDown,
                                 color: Colors.white,
-                                size: 18,
+                                size: 15,
                               )
                             ],
                           ),

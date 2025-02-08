@@ -44,7 +44,7 @@ class _FilterMoteisState extends State<FilterMoteis> {
       decoration: BoxDecoration(
         color: AppColors.background,
         borderRadius: BorderRadius.vertical(
-          top: Radius.circular(9),
+          top: Radius.circular(15),
         ),
       ),
       child: SingleChildScrollView(
