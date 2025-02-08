@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:guiamoteisgo/core/utils/app_colors.dart';
+import 'package:guiamoteisgo/modules/home/presenter/widgets/header/filter_moteis.dart';
+import 'package:guiamoteisgo/modules/home/presenter/widgets/header/header.dart';
+import 'package:guiamoteisgo/modules/home/presenter/widgets/list_moteis.dart';
 import 'package:provider/provider.dart';
 import 'package:guiamoteisgo/modules/home/presenter/stores/home_store.dart';
 
@@ -20,21 +24,17 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Consumer<HomeStore>(
-              builder: (_, store, child) => SizedBox(
-                height: 300,
-                child: ListView.builder(
-                  itemCount: store.listMoteis.length,
-                  itemBuilder: (_, i) =>
-                      Text(store.listMoteis[i].fantasia ?? ''),
-                ),
-              ),
-            ),
-          ],
+    return SafeArea(
+      top: false,
+      bottom: true,
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Header(),
+              ListMoteis(),
+            ],
+          ),
         ),
       ),
     );
