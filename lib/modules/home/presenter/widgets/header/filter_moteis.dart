@@ -43,6 +43,12 @@ class _FilterMoteisState extends State<FilterMoteis> {
       height: 60,
       decoration: BoxDecoration(
         color: AppColors.background,
+        border: Border(
+          bottom: BorderSide(
+            color: Colors.grey,
+            width: 0.5,
+          ),
+        ),
         borderRadius: BorderRadius.vertical(
           top: Radius.circular(15),
         ),
@@ -50,7 +56,7 @@ class _FilterMoteisState extends State<FilterMoteis> {
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 12),
           child: Row(
             children: [
               FilterItem(

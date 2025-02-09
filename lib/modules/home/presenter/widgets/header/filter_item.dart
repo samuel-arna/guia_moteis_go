@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:guiamoteisgo/core/utils/app_colors.dart';
 
 class FilterItem extends StatefulWidget {
   final IconData? icon;
@@ -15,7 +14,7 @@ class _FilterItemState extends State<FilterItem> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 6),
+      padding: const EdgeInsets.only(left: 8),
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white,

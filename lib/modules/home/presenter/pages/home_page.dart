@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:guiamoteisgo/core/utils/app_colors.dart';
-import 'package:guiamoteisgo/modules/home/presenter/widgets/header/filter_moteis.dart';
 import 'package:guiamoteisgo/modules/home/presenter/widgets/header/header.dart';
 import 'package:guiamoteisgo/modules/home/presenter/widgets/list_moteis.dart';
 import 'package:provider/provider.dart';
@@ -28,13 +26,11 @@ class _HomePageState extends State<HomePage> {
       top: false,
       bottom: true,
       child: Scaffold(
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Header(),
-              ListMoteis(),
-            ],
-          ),
+        body: Column(
+          children: [
+            Header(),
+            ListMoteis(),
+          ],
         ),
       ),
     );

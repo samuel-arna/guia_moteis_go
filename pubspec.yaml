@@ -15,6 +15,7 @@ dependencies:
   provider: ^6.1.2
   either_dart: ^1.0.0
   font_awesome_flutter: ^10.8.0
+  flutter_carousel_widget: ^3.1.0
 
 dev_dependencies:
   flutter_test:
