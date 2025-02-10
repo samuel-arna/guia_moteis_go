@@ -14,19 +14,22 @@ class Motel extends StatefulWidget {
 class _MotelState extends State<Motel> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        HeaderMotel(
-          logoUrl: widget.motel.logo!,
-          fantasia: widget.motel.fantasia!,
-          bairro: widget.motel.bairro!,
-          media: widget.motel.media.toString(),
-          qntAval: widget.motel.qtdAvaliacoes.toString(),
-        ),
-        ListSuites(
-          suites: widget.motel.suites ?? [],
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 30),
+      child: Column(
+        children: [
+          HeaderMotel(
+            logoUrl: widget.motel.logo!,
+            fantasia: widget.motel.fantasia!,
+            bairro: widget.motel.bairro!,
+            media: widget.motel.media.toString(),
+            qntAval: widget.motel.qtdAvaliacoes.toString(),
+          ),
+          ListSuites(
+            suites: widget.motel.suites ?? [],
+          ),
+        ],
+      ),
     );
   }
 }

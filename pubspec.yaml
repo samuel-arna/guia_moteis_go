@@ -18,6 +18,7 @@ dependencies:
   flutter_carousel_widget: ^3.1.0
   google_fonts: ^6.2.1
   skeletonizer: ^1.4.3
+  swipe_image_gallery: ^0.10.1
 
 dev_dependencies:
   flutter_test:
