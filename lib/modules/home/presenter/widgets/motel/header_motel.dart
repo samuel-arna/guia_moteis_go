@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:guiamoteisgo/core/utils/app_colors.dart';
 
 class HeaderMotel extends StatelessWidget {
@@ -28,12 +29,9 @@ class HeaderMotel extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 9),
-              child: CircleAvatar(
-                radius: 15,
-                backgroundImage: NetworkImage(logoUrl),
-              ),
+            CircleAvatar(
+              radius: 15,
+              backgroundImage: NetworkImage(logoUrl),
             ),
             const SizedBox(width: 15),
             Expanded(
@@ -42,20 +40,21 @@ class HeaderMotel extends StatelessWidget {
                 children: [
                   Text(
                     fantasia.toLowerCase(),
-                    style: TextStyle(
+                    style: GoogleFonts.epilogue(
                       fontSize: 27,
                       color: AppColors.strongText,
-                      overflow: TextOverflow.ellipsis,
                       fontWeight: FontWeight.w400,
+                      height: 1,
                     ),
+                    maxLines: 1,
                   ),
                   Text(
                     bairro.toLowerCase(),
-                    style: TextStyle(
-                      fontSize: 13,
+                    style: GoogleFonts.epilogue(
+                      fontSize: 14,
                       color: AppColors.lightText,
-                      overflow: TextOverflow.ellipsis,
                     ),
+                    maxLines: 1,
                   ),
                   const SizedBox(height: 6),
                   Row(
@@ -106,13 +105,10 @@ class HeaderMotel extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 3),
-              child: const FaIcon(
-                FontAwesomeIcons.solidHeart,
-                color: Color.fromARGB(255, 183, 179, 179),
-                size: 21,
-              ),
+            const FaIcon(
+              FontAwesomeIcons.solidHeart,
+              color: Color.fromARGB(255, 183, 179, 179),
+              size: 24,
             ),
           ],
         ),

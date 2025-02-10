@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:either_dart/either.dart';
 
 import 'package:http/http.dart' as http;
-// utilizaria o pacote dio ao invés de http, para montar as exceptions através de interceptors.
+// utilizaria o pacote dio ao invés de http, para montar as exceptions através de interceptors e armazenar cache.
 
 import 'package:guiamoteisgo/modules/home/data/models/list_moteis_model.dart';
 

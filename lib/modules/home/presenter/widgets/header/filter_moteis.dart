@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:guiamoteisgo/core/utils/app_colors.dart';
+import 'package:guiamoteisgo/modules/home/presenter/stores/home_store.dart';
 import 'package:guiamoteisgo/modules/home/presenter/widgets/header/filter_item.dart';
+import 'package:provider/provider.dart';
 
 class FilterMoteis extends StatefulWidget {
   const FilterMoteis({super.key});
@@ -11,63 +13,47 @@ class FilterMoteis extends StatefulWidget {
 }
 
 class _FilterMoteisState extends State<FilterMoteis> {
-  //mock
-  List<String> filtros = [
-    'com desconto',
-    'disponíveis',
-    'hidro',
-    'piscina',
-    'sauna',
-    'ofurô',
-    'decoração erótica',
-    'decoração temática',
-    'cadeira erótica',
-    'pista de dança',
-    'garagem privativa',
-    'frigobar',
-    'internet wi-fi',
-    'suite para festas',
-    'suite com acessibilidade',
-  ];
-  List<Widget> _buildFilters(List<String> list) {
+  List<Widget> _buildFilters(Set<String> list) {
     List<Widget> nList = [];
     for (var filter in list) {
-      nList.add(FilterItem(label: filter));
+      nList.add(FilterItem(label: filter.toLowerCase()));
     }
     return nList;
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 60,
-      decoration: BoxDecoration(
-        color: AppColors.background,
-        border: Border(
-          bottom: BorderSide(
-            color: Colors.grey,
-            width: 0.5,
+    return Consumer<HomeStore>(builder: (context, store, child) {
+      return Container(
+        height: 60,
+        decoration: BoxDecoration(
+          color: AppColors.background,
+          border: Border(
+            bottom: BorderSide(
+              color: const Color.fromARGB(255, 192, 192, 192),
+              width: 0.5,
+            ),
+          ),
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(15),
           ),
         ),
-        borderRadius: BorderRadius.vertical(
-          top: Radius.circular(15),
-        ),
-      ),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12),
-          child: Row(
-            children: [
-              FilterItem(
-                label: 'filtros',
-                icon: FontAwesomeIcons.sliders,
-              ),
-              ..._buildFilters(filtros),
-            ],
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            child: Row(
+              children: [
+                FilterItem(
+                  label: 'filtros',
+                  icon: FontAwesomeIcons.sliders,
+                ),
+                ..._buildFilters(store.getCategories()),
+              ],
+            ),
           ),
         ),
-      ),
-    );
+      );
+    });
   }
 }
