@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 import 'package:guiamoteisgo/modules/home/data/models/list_moteis/suites_model.dart';
-import 'package:guiamoteisgo/modules/home/presenter/stores/home_store.dart';
+import 'package:guiamoteisgo/modules/home/presenter/store/home_store.dart';
 import 'package:guiamoteisgo/modules/home/presenter/widgets/motel/list_suites/categorias_itens.dart';
 import 'package:guiamoteisgo/modules/home/presenter/widgets/motel/list_suites/header_suite.dart';
 import 'package:guiamoteisgo/modules/home/presenter/widgets/motel/list_suites/list_periodos.dart';
@@ -18,7 +18,6 @@ class ListSuites extends StatefulWidget {
 class _ListSuitesState extends State<ListSuites> {
   List<Widget> _buildSuites(List<Suites> suites) {
     List<Widget> nList = [];
-
     for (var i = 0; i < suites.length; i++) {
       nList.add(
         Padding(
@@ -34,7 +33,7 @@ class _ListSuitesState extends State<ListSuites> {
               ),
               ListPeriodos(
                 periodos: suites[i].periodos ?? [],
-              )
+              ),
             ],
           ),
         ),
@@ -46,9 +45,9 @@ class _ListSuitesState extends State<ListSuites> {
   @override
   Widget build(BuildContext context) {
     return Consumer<HomeStore>(builder: (context, store, child) {
-      return FlutterCarousel(
-        options: FlutterCarouselOptions(
-          height: 780,
+      return ExpandableCarousel(
+        options: ExpandableCarouselOptions(
+          estimatedPageSize: 780,
           viewportFraction: 0.9,
           disableCenter: true,
           enableInfiniteScroll: false,
@@ -57,7 +56,12 @@ class _ListSuitesState extends State<ListSuites> {
           floatingIndicator: false,
           showIndicator: false,
         ),
-        items: _buildSuites(store.getFilteredSuites(widget.suites)),
+        items: _buildSuites(
+          store.getFilteredSuites(
+            widget.suites,
+            store.listCategories,
+          ),
+        ),
       );
     });
   }
