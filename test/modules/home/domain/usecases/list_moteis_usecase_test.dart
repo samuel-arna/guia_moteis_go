@@ -10,7 +10,7 @@ void main() {
 
   var repository = HomeRepository(datasource);
 
-  test('1. Deve pegar a lista de motéis', () async {
+  test('Deve pegar a lista de motéis', () async {
     var listMoteis = await ListMoteisUsecase(repository).getListMoteis();
     expect(listMoteis.isRight, true);
   });

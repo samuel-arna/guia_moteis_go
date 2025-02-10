@@ -3,7 +3,7 @@ import 'package:guiamoteisgo/modules/home/presenter/widgets/header/header.dart';
 import 'package:guiamoteisgo/modules/home/presenter/widgets/list_moteis.dart';
 import 'package:guiamoteisgo/modules/home/presenter/widgets/map_fab.dart';
 import 'package:provider/provider.dart';
-import 'package:guiamoteisgo/modules/home/presenter/stores/home_store.dart';
+import 'package:guiamoteisgo/modules/home/presenter/store/home_store.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 class HomePage extends StatefulWidget {

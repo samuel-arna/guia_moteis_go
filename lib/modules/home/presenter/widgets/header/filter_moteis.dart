@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:guiamoteisgo/core/utils/app_colors.dart';
-import 'package:guiamoteisgo/modules/home/presenter/stores/home_store.dart';
+import 'package:guiamoteisgo/modules/home/presenter/store/home_store.dart';
 import 'package:guiamoteisgo/modules/home/presenter/widgets/header/filter_item.dart';
 import 'package:provider/provider.dart';
 

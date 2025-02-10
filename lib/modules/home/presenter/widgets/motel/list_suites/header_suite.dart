@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:guiamoteisgo/core/utils/app_colors.dart';
 import 'package:guiamoteisgo/modules/home/data/models/list_moteis/suites_model.dart';
+import 'package:guiamoteisgo/modules/home/presenter/widgets/motel/list_suites/fotos_suite.dart';
 
 class HeaderSuite extends StatefulWidget {
   final Suites suite;
@@ -31,15 +32,23 @@ class _HeaderSuiteState extends State<HeaderSuite> {
         padding: const EdgeInsets.all(6),
         child: Column(
           children: [
-            Container(
-              height: 250,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(6),
-                image: DecorationImage(
-                  image: NetworkImage(
-                    widget.suite.fotos!.first,
+            GestureDetector(
+              onTap: () {
+                showBottomSheet(
+                  context: context,
+                  builder: (_) => FotosSuite(fotos: widget.suite.fotos!),
+                );
+              },
+              child: Container(
+                height: 250,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(6),
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      widget.suite.fotos!.first,
+                    ),
+                    fit: BoxFit.fitHeight,
                   ),
-                  fit: BoxFit.fitHeight,
                 ),
               ),
             ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:guiamoteisgo/modules/home/presenter/stores/home_store.dart';
+import 'package:guiamoteisgo/modules/home/presenter/store/home_store.dart';
 import 'package:guiamoteisgo/modules/home/presenter/widgets/motel/motel.dart';
 import 'package:provider/provider.dart';
 

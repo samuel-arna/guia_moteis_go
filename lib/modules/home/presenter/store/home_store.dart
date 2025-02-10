@@ -47,11 +47,11 @@ class HomeStore extends ChangeNotifier {
     return categories;
   }
 
-  List<Suites> getFilteredSuites(List<Suites> suites) {
-    if (listCategories.isEmpty) {
+  List<Suites> getFilteredSuites(List<Suites> suites, List<String> filter) {
+    if (filter.isEmpty) {
       return suites;
     }
-    final Set<String> categorySet = listCategories.toSet();
+    final Set<String> categorySet = filter.toSet();
     List<Suites> filteredSuites = [];
     for (final suite in suites) {
       if (suite.categoriaItens != null) {

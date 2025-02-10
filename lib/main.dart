@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:guiamoteisgo/core/utils/app_colors.dart';
 import 'package:provider/provider.dart';
 import 'package:guiamoteisgo/modules/home/presenter/pages/home_page.dart';
-import 'package:guiamoteisgo/modules/home/presenter/stores/home_store.dart';
+import 'package:guiamoteisgo/modules/home/presenter/store/home_store.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
