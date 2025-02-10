@@ -17,14 +17,16 @@ class HomeStore extends ChangeNotifier {
   bool loading = false;
 
   Future<void> getListMoteis() async {
-    print('pegando novamente moteis');
     setLoading(true);
     Either<String, ListMoteis> response =
         await ListMoteisUsecase(repository).getListMoteis();
     response.isRight
         ? listMoteis = response.right.moteis ?? []
         : print(response.left);
-    setLoading(false);
+    notifyListeners();
+    Future.delayed(Duration(seconds: 3), () {
+      setLoading(false);
+    });
   }
 
   Set<String> getCategories() {
@@ -49,9 +51,7 @@ class HomeStore extends ChangeNotifier {
     if (listCategories.isEmpty) {
       return suites;
     }
-
     final Set<String> categorySet = listCategories.toSet();
-
     List<Suites> filteredSuites = [];
     for (final suite in suites) {
       if (suite.categoriaItens != null) {

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:guiamoteisgo/core/utils/app_colors.dart';
-import 'package:guiamoteisgo/modules/home/presenter/stores/home_store.dart';
 import 'package:guiamoteisgo/modules/home/presenter/widgets/header/filter_moteis.dart';
 import 'package:guiamoteisgo/modules/home/presenter/widgets/header/menu_tab.dart';
-import 'package:provider/provider.dart';
 
 class Header extends StatefulWidget {
   const Header({super.key});
