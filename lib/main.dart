@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:guiamoteisgo/core/utils/app_colors.dart';
 import 'package:provider/provider.dart';
 import 'package:guiamoteisgo/modules/home/presenter/pages/home_page.dart';
 import 'package:guiamoteisgo/modules/home/presenter/stores/home_store.dart';
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Samuel Arná',
+        theme: ThemeData(scaffoldBackgroundColor: AppColors.background),
         home: const HomePage(),
       ),
     );

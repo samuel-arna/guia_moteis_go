@@ -16,7 +16,7 @@ class _ListMoteisState extends State<ListMoteis> {
     return Expanded(
       child: Consumer<HomeStore>(
         builder: (_, store, child) => ListView.builder(
-          padding: EdgeInsets.zero,
+          padding: EdgeInsets.only(top: 15),
           itemCount: store.listMoteis.length,
           itemBuilder: (_, i) => Column(
             children: [

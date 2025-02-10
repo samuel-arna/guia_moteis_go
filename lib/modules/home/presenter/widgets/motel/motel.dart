@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:guiamoteisgo/modules/home/data/models/list_moteis/moteis_model.dart';
 import 'package:guiamoteisgo/modules/home/presenter/widgets/motel/header_motel.dart';
-import 'package:guiamoteisgo/modules/home/presenter/widgets/motel/list_suites.dart';
+import 'package:guiamoteisgo/modules/home/presenter/widgets/motel/list_suites/list_periodos.dart';
 
 class Motel extends StatefulWidget {
   final Moteis motel;
