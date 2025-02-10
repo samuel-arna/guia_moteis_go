@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:guiamoteisgo/core/utils/app_colors.dart';
+import 'package:guiamoteisgo/modules/home/data/repositories/home_repository.dart';
 import 'package:provider/provider.dart';
 import 'package:guiamoteisgo/modules/home/presenter/pages/home_page.dart';
 import 'package:guiamoteisgo/modules/home/presenter/store/home_store.dart';
@@ -13,6 +14,7 @@ void main() {
   SystemChrome.setSystemUIOverlayStyle(
     SystemUiOverlayStyle(statusBarColor: Colors.transparent),
   );
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(const MyApp());
 }
 
@@ -32,7 +34,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => HomeStore()),
+        ChangeNotifierProvider(
+          create: (_) => HomeStore(
+            repository: HomeRepository(datasource),
+          ),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

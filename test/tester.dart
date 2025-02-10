@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'dart:io';
 import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
@@ -8,6 +10,7 @@ void main() {
     final testFiles = [
       'test/modules/home/presenter/store/home_store_test.dart',
       'test/modules/home/domain/usecases/list_moteis_usecase_test.dart',
+      'test/modules/home/presenter/widgets/motel/list_suites/list_periodos_test.dart',
     ];
     final processes = <Future<Process>>[];
     for (final file in testFiles) {

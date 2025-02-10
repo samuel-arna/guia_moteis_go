@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:either_dart/either.dart';
 import 'package:flutter/material.dart';
 import 'package:guiamoteisgo/core/config/api_config.dart';
@@ -9,9 +11,11 @@ import 'package:guiamoteisgo/modules/home/data/repositories/home_repository.dart
 import 'package:guiamoteisgo/modules/home/domain/usecases/list_moteis_usecase.dart';
 
 var datasource = RemoteHomeDatasource(ApiConfig.nPointAPI);
-var repository = HomeRepository(datasource);
 
 class HomeStore extends ChangeNotifier {
+  late final HomeRepository repository;
+
+  HomeStore({required this.repository});
   List<String> listCategories = [];
   List<Moteis> listMoteis = [];
   bool loading = false;

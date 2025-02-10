@@ -6,6 +6,7 @@ import 'package:guiamoteisgo/modules/home/domain/usecases/list_moteis_usecase.da
 
 void main() {
   var datasource = RemoteHomeDatasource(ApiConfig.nPointAPI);
+  var datasource2 = RemoteHomeDatasource(ApiConfig.jsonKeeperAPI);
   // alterando para a api do jsonKeeper identifica o erro no certificado ssl
 
   var repository = HomeRepository(datasource);
@@ -13,5 +14,10 @@ void main() {
   test('Deve pegar a lista de motéis', () async {
     var listMoteis = await ListMoteisUsecase(repository).getListMoteis();
     expect(listMoteis.isRight, true);
+  });
+  test('Não deve pegar a lista de motéis', () async {
+    repository = HomeRepository(datasource2);
+    var listMoteis = await ListMoteisUsecase(repository).getListMoteis();
+    expect(listMoteis.isLeft, true);
   });
 }

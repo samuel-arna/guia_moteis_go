@@ -19,6 +19,7 @@ dependencies:
   google_fonts: ^6.2.1
   skeletonizer: ^1.4.3
   swipe_image_gallery: ^0.10.1
+  mocktail: ^1.0.4
 
 dev_dependencies:
   flutter_test:
