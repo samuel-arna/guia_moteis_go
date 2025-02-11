@@ -1,12 +1,4 @@
-# Guia de Motéis GO: Uma Jornada de Desenvolvimento em 3 Dias
-
-
-### Desenvolvimento em 3 Dias:
-
-- **Dia 1:** Estruturação e Testes de API
-- **Dia 2:** Desenvolvimento da Interface Visual
-- **Dia 3:** Integrações e Testes de Estados e Widgets.
-
+# Guia de Motéis GO
 
 - **Versão do Flutter:** 3.27.4
 
