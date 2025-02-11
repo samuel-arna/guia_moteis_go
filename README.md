@@ -1,16 +1,21 @@
-# guiamoteisgo
+# Guia de Motéis GO: Uma Jornada de Desenvolvimento em 3 Dias
 
-A new Flutter project.
 
-## Getting Started
+### Desenvolvimento em 3 Dias:
 
-This project is a starting point for a Flutter application.
+- **Dia 1:** Estruturação e Testes de API
+- **Dia 2:** Desenvolvimento da Interface Visual
+- **Dia 3:** Integrações e Testes de Estados e Widgets.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Versão do Flutter:** 3.27.4
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### Baixe o APK:
+
+Experimente o App agora mesmo!
+
+[Link para baixar o apk](https://drive.google.com/file/d/1uXTSLio4O0CVC7Az4sPZaWOl1oqrT1Ua/view?usp=sharing)
+
+### Dúvidas?
+
+Estou à disposição para ajudar! Entre em contato pelo WhatsApp: 11 91565 2168
