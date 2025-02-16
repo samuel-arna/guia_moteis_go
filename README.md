@@ -2,6 +2,10 @@
 
 - **Versão do Flutter:** 3.27.4
 
+#### Assista o video do APP:
+
+[Link do video](https://drive.google.com/file/d/1_VsQKmL0U66VDNqekStZPu3pGo2bRgkm/view?usp=drivesdk)
+
 #### Baixe o APK:
 
 Experimente o App agora mesmo!
